@@ -142,7 +142,7 @@ export function CompanySwitcher() {
             </div>
 
             <div className="py-1">
-              {state?.api?.length >= import.meta.env.VITE_MAX_COMPANY ? (
+              {import.meta.env.VITE_USE_COMPANY_SEARCHBOX ? (
                 <Combobox
                   value={currentCompany.settings.name}
                   onChange={(e: string) => {
