@@ -41,7 +41,10 @@ export function useAuthenticated(): boolean {
   queryClient.fetchQuery(
     `/api/v1/refresh?per_page=${import.meta.env.VITE_MAX_COMPANY}`,
     () =>
-      request('POST', endpoint(`/api/v1/refresh?per_page=100`))
+      request(
+        'POST',
+        endpoint(`/api/v1/refresh?per_page=${import.meta.env.VITE_MAX_COMPANY}`)
+      )
         .then((response) => {
           let currentIndex = 0;
 

@@ -13,6 +13,7 @@ interface ImportMetaEnv extends Readonly<Record<string, string>> {
   readonly VITE_IS_PRODUCTION: string;
   readonly VITE_WHITELABEL_INVOICE_URL: string;
   readonly VITE_MAX_COMPANY: number;
+  readonly VITE_USE_COMPANY_SEARCHBOX: string;
 }
 
 interface ImportMeta {
